@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jgrep"
+version = "0.1.0"
+description = "JSON grep utility for key or value search"
+readme = "README.rst"
+requires-python = ">=3.6"
+license = { text = "MIT" }
+authors = [
+    { name = "Justin Engel", email = "jtengel08@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.scripts]
+jgrep = "jgrep:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["jgrep.py"]
